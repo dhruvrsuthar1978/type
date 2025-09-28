@@ -10,18 +10,18 @@
     --background: 0 0% 100%;
     --foreground: 213 31% 8%;
     
-    /* TypeAware Brand Palette */
-    --primary: 213 94% 68%;
+    /* Modern Brand Palette - Purple/Violet Theme */
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 213 84% 58%;
-    --primary-light: 213 94% 85%;
+    --primary-dark: 262 73% 48%;
+    --primary-light: 262 83% 78%;
     
-    /* Security Theme Colors */
-    --security: 142 76% 36%;
+    /* Enhanced Security Theme Colors */
+    --security: 142 71% 45%;
     --security-foreground: 0 0% 100%;
-    --warning: 45 93% 47%;
+    --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
-    --danger: 0 84% 60%;
+    --danger: 0 72% 51%;
     --danger-foreground: 0 0% 100%;
     
     /* UI Elements */
@@ -46,11 +46,12 @@
     --input: 213 32% 91%;
     --ring: 213 94% 68%;
     
-    /* Gradients */
+    /* Modern Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-security: linear-gradient(135deg, hsl(var(--security)), hsl(142 76% 46%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--security)));
+    --gradient-security: linear-gradient(135deg, hsl(var(--security)), hsl(142 71% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(220 91% 65%));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 78%));
     
     /* Shadows */
     --shadow-card: 0 4px 6px -1px hsl(213 94% 68% / 0.1), 0 2px 4px -1px hsl(213 94% 68% / 0.06);
@@ -68,16 +69,16 @@
     --background: 213 31% 6%;
     --foreground: 213 32% 95%;
     
-    --primary: 213 94% 68%;
-    --primary-foreground: 213 31% 6%;
-    --primary-dark: 213 84% 58%;
-    --primary-light: 213 94% 85%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 262 73% 48%;
+    --primary-light: 262 83% 78%;
     
-    --security: 142 76% 46%;
+    --security: 142 71% 55%;
     --security-foreground: 0 0% 100%;
-    --warning: 45 93% 57%;
+    --warning: 38 92% 60%;
     --warning-foreground: 0 0% 100%;
-    --danger: 0 84% 70%;
+    --danger: 0 72% 61%;
     --danger-foreground: 0 0% 100%;
     
     --card: 213 31% 8%;
@@ -103,9 +104,10 @@
     
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-security: linear-gradient(135deg, hsl(var(--security)), hsl(142 76% 56%));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--security)));
+    --gradient-security: linear-gradient(135deg, hsl(var(--security)), hsl(142 71% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(220 91% 65%));
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 78%));
   }
   
   * {
@@ -137,6 +139,10 @@
   
   .bg-gradient-card {
     background: var(--gradient-card);
+  }
+  
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
   }
   
   /* Custom shadows */

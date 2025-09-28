@@ -27,6 +27,7 @@ const Navigation = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: Home, public: true },
     { path: '/about', label: 'About', icon: Info, public: true },
+    { path: '/demo', label: 'Demo', icon: Shield, public: true },
   ];
 
   const authItems = isAuthenticated
