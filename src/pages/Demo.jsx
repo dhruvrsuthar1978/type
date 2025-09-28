@@ -132,8 +132,13 @@ const Demo = () => {
                   Download our browser extension for real-time protection across all websites
                 </CardDescription>
               </div>
-              <Button onClick={downloadExtension} className="bg-gradient-primary hover:opacity-90">
-                <Download className="w-4 h-4 mr-2" />
+              <Button 
+                onClick={downloadExtension} 
+                variant="premium" 
+                size="lg" 
+                className="min-w-[160px]"
+              >
+                <Download className="w-5 h-5 mr-2" />
                 Download Extension
               </Button>
             </div>
@@ -161,20 +166,22 @@ const Demo = () => {
                 className="transition-smooth focus:ring-2 focus:ring-primary/20"
               />
               
-              <div className="flex gap-2">
+              <div className="flex gap-3">
                 <Button 
                   onClick={analyzeText} 
                   disabled={isAnalyzing}
-                  className="bg-gradient-primary hover:opacity-90 flex-1"
+                  variant="default"
+                  size="lg"
+                  className="flex-1"
                 >
                   {isAnalyzing ? 'Analyzing...' : 'Analyze Text'}
                 </Button>
                 <Button
                   variant="outline"
                   onClick={() => setShowAnalysis(!showAnalysis)}
-                  size="icon"
+                  size="lg"
                 >
-                  {showAnalysis ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                  {showAnalysis ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </Button>
               </div>
 
@@ -232,19 +239,20 @@ const Demo = () => {
                         Threats Detected ({analysisResult.threats.length})
                       </h4>
                       {analysisResult.threats.map((threat, index) => (
-                        <Alert key={index} className="border-l-4 border-l-warning">
-                          <AlertDescription>
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <span className="font-medium">{threat.word}</span>
-                                <p className="text-xs text-muted-foreground mt-1">{threat.context}</p>
-                              </div>
-                              <Badge className={getSeverityColor(threat.severity)}>
-                                {threat.severity}
-                              </Badge>
-                            </div>
-                          </AlertDescription>
-                        </Alert>
+                  <Alert key={index} className="border-l-4 border-l-warning bg-warning/5 hover-scale">
+                    <AlertTriangle className="w-4 h-4 text-warning" />
+                    <AlertDescription>
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="font-semibold text-foreground">{threat.word}</span>
+                          <p className="text-xs text-muted-foreground mt-1">{threat.context}</p>
+                        </div>
+                        <Badge className={getSeverityColor(threat.severity)}>
+                          {threat.severity}
+                        </Badge>
+                      </div>
+                    </AlertDescription>
+                  </Alert>
                       ))}
                     </div>
                   )}
@@ -266,12 +274,12 @@ const Demo = () => {
                   </div>
 
                   {analysisResult.threats.length === 0 && (
-                    <Alert className="border-l-4 border-l-security">
-                      <CheckCircle className="w-4 h-4 text-security" />
-                      <AlertDescription className="text-security-foreground">
-                        Great! No safety threats detected in your message. It's safe to post.
-                      </AlertDescription>
-                    </Alert>
+                  <Alert className="border-l-4 border-l-security bg-security/5 hover-scale">
+                    <CheckCircle className="w-4 h-4 text-security" />
+                    <AlertDescription className="text-foreground font-medium">
+                      Great! No safety threats detected in your message. It's safe to post.
+                    </AlertDescription>
+                  </Alert>
                   )}
                 </div>
               )}

@@ -74,8 +74,8 @@ const Navigation = () => {
               {navItems.map((item, index) => (
                 <Link key={index} to={item.path}>
                   <Button 
-                    variant={isActive(item.path) ? "secondary" : "ghost"}
-                    className="hover-glow"
+                    variant={isActive(item.path) ? "default" : "ghost"}
+                    className="hover-scale"
                   >
                     <item.icon className="h-4 w-4 mr-2" />
                     {item.label}
@@ -93,7 +93,7 @@ const Navigation = () => {
                 <Link key={index} to={item.path}>
                   <Button 
                     variant={isActive(item.path) ? "default" : "outline"}
-                    className="hover-glow"
+                    className="hover-scale"
                   >
                     <item.icon className="h-4 w-4 mr-2" />
                     {item.label}
@@ -102,7 +102,7 @@ const Navigation = () => {
               ))}
 
               {/* Theme toggle */}
-              <Button variant="ghost" size="icon" onClick={toggleTheme} className="hover-glow">
+              <Button variant="ghost" size="icon" onClick={toggleTheme} className="hover-scale">
                 {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
               </Button>
 
@@ -114,7 +114,7 @@ const Navigation = () => {
                     <span className="text-sm text-muted-foreground hidden lg:block">
                       {user?.name}
                     </span>
-                    <Button variant="ghost" onClick={handleLogout} className="hover-glow">
+                    <Button variant="outline" onClick={handleLogout} className="hover-scale">
                       <LogOut className="h-4 w-4 mr-2" />
                       Logout
                     </Button>
