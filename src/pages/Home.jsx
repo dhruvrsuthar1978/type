@@ -103,7 +103,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/about">
-              <Button variant="glass" size="lg" className="min-w-40 group">
+              <Button variant="outline" size="lg" className="min-w-40 text-white border-white/30 hover:bg-white/10 group">
                 <Globe className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Learn More
               </Button>
@@ -218,9 +218,9 @@ const Home = () => {
           {/* Secondary CTA */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
             <Button 
-              variant="glass" 
+              variant="outline" 
               size="lg" 
-              className="min-w-40 group"
+              className="min-w-40 text-white border-white/30 hover:bg-white/10 group"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/extension.zip';
