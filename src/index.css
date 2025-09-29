@@ -53,11 +53,12 @@
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(262 20% 94%));
     --gradient-accent: linear-gradient(135deg, hsl(262 83% 58%), hsl(262 83% 78%));
     
-    /* Enhanced Shadows */
-    --shadow-card: 0 4px 12px -2px hsl(262 83% 58% / 0.08), 0 2px 6px -1px hsl(262 83% 58% / 0.04);
-    --shadow-lg: 0 10px 20px -5px hsl(262 83% 58% / 0.12), 0 4px 8px -2px hsl(262 83% 58% / 0.06);
-    --shadow-xl: 0 20px 30px -8px hsl(262 83% 58% / 0.15), 0 10px 15px -5px hsl(262 83% 58% / 0.08);
-    --shadow-glow: 0 0 20px hsl(262 83% 58% / 0.3);
+  /* Enhanced Shadows */
+  --shadow-card: 0 4px 12px -2px hsl(262 83% 58% / 0.08), 0 2px 6px -1px hsl(262 83% 58% / 0.04);
+  --shadow-lg: 0 10px 20px -5px hsl(262 83% 58% / 0.12), 0 4px 8px -2px hsl(262 83% 58% / 0.06);
+  --shadow-xl: 0 20px 30px -8px hsl(262 83% 58% / 0.15), 0 10px 15px -5px hsl(262 83% 58% / 0.08);
+  --shadow-glow: 0 0 30px hsl(262 83% 58% / 0.4);
+  --shadow-dramatic: 0 25px 50px -12px hsl(262 83% 58% / 0.25);
     
     --radius: 0.75rem;
     
@@ -156,7 +157,7 @@
   }
   
   .shadow-dramatic {
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-dramatic);
   }
   
   /* Animation classes */

@@ -70,16 +70,41 @@ const Home = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+            <Link to="/demo">
+              <Button variant="premium" size="xl" className="min-w-48 group">
+                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Try Demo
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="min-w-48 group"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/extension.zip';
+                link.download = 'typeaware-extension.zip';
+                link.click();
+              }}
+            >
+              <Chrome className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+              Download Extension
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+          
+          {/* Additional Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6 animate-fade-in">
             <Link to="/signup">
-              <Button variant="glass" size="xl" className="min-w-48 hover-glow">
-                <Chrome className="mr-2 h-5 w-5" />
+              <Button variant="glass" size="lg" className="min-w-40 group">
+                <Lock className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Get Started Free
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link to="/about">
-              <Button variant="outline" size="xl" className="min-w-48 text-white border-white/30 hover:bg-white/10">
-                <Globe className="mr-2 h-5 w-5" />
+              <Button variant="outline" size="lg" className="min-w-40 text-white border-white/30 hover:bg-white/10 group">
+                <Globe className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Learn More
               </Button>
             </Link>
@@ -176,15 +201,39 @@ const Home = () => {
             Join thousands of users already protecting their online communities with TypeAware.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/demo">
+              <Button variant="premium" size="xl" className="min-w-48 group">
+                <Eye className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                Try Demo Now
+              </Button>
+            </Link>
             <Link to="/signup">
-              <Button variant="glass" size="xl" className="min-w-48">
-                <Lock className="mr-2 h-5 w-5" />
+              <Button variant="glass" size="xl" className="min-w-48 group">
+                <Lock className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                 Start Free Trial
               </Button>
             </Link>
+          </div>
+          
+          {/* Secondary CTA */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="min-w-40 text-white border-white/30 hover:bg-white/10 group"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/extension.zip';
+                link.download = 'typeaware-extension.zip';
+                link.click();
+              }}
+            >
+              <Chrome className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+              Get Extension
+            </Button>
             <Link to="/login">
-              <Button variant="outline" size="xl" className="min-w-48 text-white border-white/30 hover:bg-white/10">
-                <Zap className="mr-2 h-5 w-5" />
+              <Button variant="ghost" size="lg" className="min-w-40 text-white hover:bg-white/10 group">
+                <Zap className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Sign In
               </Button>
             </Link>
