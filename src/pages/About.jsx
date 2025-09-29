@@ -224,12 +224,10 @@ const About = () => {
             Be part of the solution. Help us build safer digital communities for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Card className="glass-card p-6 max-w-md">
-              <CardContent className="p-0 text-center">
-                <h3 className="text-lg font-semibold text-white mb-2">Ready to get started?</h3>
-                <p className="text-white/80 text-sm">Join thousands of users protecting their communities</p>
-              </CardContent>
-            </Card>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-md border border-white/20">
+              <h3 className="text-lg font-semibold text-white mb-2">Ready to get started?</h3>
+              <p className="text-white/80 text-sm">Join thousands of users protecting their communities</p>
+            </div>
           </div>
         </div>
       </section>
